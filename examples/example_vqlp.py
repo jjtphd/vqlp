@@ -6,7 +6,8 @@ A worked example of the vqlp package demonstrating:
 2. Fitting prototypes via FAISS k-means (VQFitter)
 3. Full recall analysis on the learned prototypes (VQRecaller), including labels
 4. Plotting data, prototypes, and the connectivity (CONN) graph
-5. Inspecting the recall products, including label summary products
+5. Saving the fitted fitter (and embedded recaller) to an HDF5 file
+6. Reloading and inspecting the recall products, including label summary
 """
 
 import numpy as np
@@ -124,8 +125,24 @@ plt.show()
 print("Plot saved to vqlp_example.png")
 
 # =============================================================================
-# 5. Inspect recall products, including label summary
+# 5. Save the fitted fitter (and embedded recaller) to disk
 # =============================================================================
+
+SAVE_PATH = "vqlp_example.h5"
+fitter.save(SAVE_PATH)
+print(f"Fitter saved to {SAVE_PATH}")
+
+# =============================================================================
+# 6. Reload and inspect recall products, including label summary
+# =============================================================================
+
+# Load back from disk — fitter2 and fitter should be identical in all respects.
+# All inspection below is performed on the reloaded object, which implicitly
+# validates the save/load round-trip.
+fitter2   = VQFitter.load(SAVE_PATH)
+recaller  = fitter2.recaller
+W         = fitter2.W
+print(f"Fitter reloaded from {SAVE_PATH}")
 
 print("\n--- get_summary() ---")
 summary = fitter.get_summary()
@@ -152,10 +169,10 @@ for i in range(min(5, M_PROTOTYPES)):
 print("\n--- Connectivity matrix (CONN) ---")
 print(f"  CONN shape      : {recaller.CONN.shape} (M x M, sparse)")
 print(f"  Nonzero entries : {recaller.CONN.nnz} ({summary['connectivity_edges']} unique edges)")
-print(f"  Degree range    : {recaller.CONN_nhbs_size.min()} – {recaller.CONN_nhbs_size.max()} neighbours")
+print(f"  Degree range    : {recaller.CONN_nhbs_size.min()} – {recaller.CONN_nhbs_size.max()} neighbors")
 print(f"  Mean degree     : {summary['mean_connectivity_degree']:.2f}")
 for i in range(min(5, M_PROTOTYPES)):
-    print(f"  Prototype {i:2d}: {recaller.CONN_nhbs_size[i]} neighbours -> {recaller.CONN_nhbs[i]}")
+    print(f"  Prototype {i:2d}: {recaller.CONN_nhbs_size[i]} neighbors -> {recaller.CONN_nhbs[i]}")
 
 print("\n--- Label recall (WL / WL_Dist / WL_Purity) ---")
 print(f"  Unique labels seen : {recaller.WL_unq}")
