@@ -452,6 +452,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vqlp.VQFitter.to_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        to_dict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vqlp.VQFitter.from_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        from_dict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vqlp.VQFitter.get_summary" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -561,6 +583,28 @@
     <span class="md-ellipsis">
       
         get_summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vqlp.VQRecaller.to_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        to_dict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vqlp.VQRecaller.from_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        from_dict
       
     </span>
   </a>
@@ -685,6 +729,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vqlp.VQFitter.to_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        to_dict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vqlp.VQFitter.from_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        from_dict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vqlp.VQFitter.get_summary" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -794,6 +860,28 @@
     <span class="md-ellipsis">
       
         get_summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vqlp.VQRecaller.to_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        to_dict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vqlp.VQRecaller.from_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        from_dict
       
     </span>
   </a>
@@ -998,41 +1086,41 @@ Set to False to suppress all terminal output.</p>
 
                   <details class="quote">
                     <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">940</span>
-<span class="normal">941</span>
-<span class="normal">942</span>
-<span class="normal">943</span>
-<span class="normal">944</span>
-<span class="normal">945</span>
-<span class="normal">946</span>
-<span class="normal">947</span>
-<span class="normal">948</span>
-<span class="normal">949</span>
-<span class="normal">950</span>
-<span class="normal">951</span>
-<span class="normal">952</span>
-<span class="normal">953</span>
-<span class="normal">954</span>
-<span class="normal">955</span>
-<span class="normal">956</span>
-<span class="normal">957</span>
-<span class="normal">958</span>
-<span class="normal">959</span>
-<span class="normal">960</span>
-<span class="normal">961</span>
-<span class="normal">962</span>
-<span class="normal">963</span>
-<span class="normal">964</span>
-<span class="normal">965</span>
-<span class="normal">966</span>
-<span class="normal">967</span>
-<span class="normal">968</span>
-<span class="normal">969</span>
-<span class="normal">970</span>
-<span class="normal">971</span>
-<span class="normal">972</span>
-<span class="normal">973</span>
-<span class="normal">974</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_bmu</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">835</span>
+<span class="normal">836</span>
+<span class="normal">837</span>
+<span class="normal">838</span>
+<span class="normal">839</span>
+<span class="normal">840</span>
+<span class="normal">841</span>
+<span class="normal">842</span>
+<span class="normal">843</span>
+<span class="normal">844</span>
+<span class="normal">845</span>
+<span class="normal">846</span>
+<span class="normal">847</span>
+<span class="normal">848</span>
+<span class="normal">849</span>
+<span class="normal">850</span>
+<span class="normal">851</span>
+<span class="normal">852</span>
+<span class="normal">853</span>
+<span class="normal">854</span>
+<span class="normal">855</span>
+<span class="normal">856</span>
+<span class="normal">857</span>
+<span class="normal">858</span>
+<span class="normal">859</span>
+<span class="normal">860</span>
+<span class="normal">861</span>
+<span class="normal">862</span>
+<span class="normal">863</span>
+<span class="normal">864</span>
+<span class="normal">865</span>
+<span class="normal">866</span>
+<span class="normal">867</span>
+<span class="normal">868</span>
+<span class="normal">869</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_bmu</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Initialize the VQ Fitter.</span>
 
@@ -1206,60 +1294,60 @@ calculation is skipped (PAM only).</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 976</span>
-<span class="normal"> 977</span>
-<span class="normal"> 978</span>
-<span class="normal"> 979</span>
-<span class="normal"> 980</span>
-<span class="normal"> 981</span>
-<span class="normal"> 982</span>
-<span class="normal"> 983</span>
-<span class="normal"> 984</span>
-<span class="normal"> 985</span>
-<span class="normal"> 986</span>
-<span class="normal"> 987</span>
-<span class="normal"> 988</span>
-<span class="normal"> 989</span>
-<span class="normal"> 990</span>
-<span class="normal"> 991</span>
-<span class="normal"> 992</span>
-<span class="normal"> 993</span>
-<span class="normal"> 994</span>
-<span class="normal"> 995</span>
-<span class="normal"> 996</span>
-<span class="normal"> 997</span>
-<span class="normal"> 998</span>
-<span class="normal"> 999</span>
-<span class="normal">1000</span>
-<span class="normal">1001</span>
-<span class="normal">1002</span>
-<span class="normal">1003</span>
-<span class="normal">1004</span>
-<span class="normal">1005</span>
-<span class="normal">1006</span>
-<span class="normal">1007</span>
-<span class="normal">1008</span>
-<span class="normal">1009</span>
-<span class="normal">1010</span>
-<span class="normal">1011</span>
-<span class="normal">1012</span>
-<span class="normal">1013</span>
-<span class="normal">1014</span>
-<span class="normal">1015</span>
-<span class="normal">1016</span>
-<span class="normal">1017</span>
-<span class="normal">1018</span>
-<span class="normal">1019</span>
-<span class="normal">1020</span>
-<span class="normal">1021</span>
-<span class="normal">1022</span>
-<span class="normal">1023</span>
-<span class="normal">1024</span>
-<span class="normal">1025</span>
-<span class="normal">1026</span>
-<span class="normal">1027</span>
-<span class="normal">1028</span>
-<span class="normal">1029</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">distX</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">871</span>
+<span class="normal">872</span>
+<span class="normal">873</span>
+<span class="normal">874</span>
+<span class="normal">875</span>
+<span class="normal">876</span>
+<span class="normal">877</span>
+<span class="normal">878</span>
+<span class="normal">879</span>
+<span class="normal">880</span>
+<span class="normal">881</span>
+<span class="normal">882</span>
+<span class="normal">883</span>
+<span class="normal">884</span>
+<span class="normal">885</span>
+<span class="normal">886</span>
+<span class="normal">887</span>
+<span class="normal">888</span>
+<span class="normal">889</span>
+<span class="normal">890</span>
+<span class="normal">891</span>
+<span class="normal">892</span>
+<span class="normal">893</span>
+<span class="normal">894</span>
+<span class="normal">895</span>
+<span class="normal">896</span>
+<span class="normal">897</span>
+<span class="normal">898</span>
+<span class="normal">899</span>
+<span class="normal">900</span>
+<span class="normal">901</span>
+<span class="normal">902</span>
+<span class="normal">903</span>
+<span class="normal">904</span>
+<span class="normal">905</span>
+<span class="normal">906</span>
+<span class="normal">907</span>
+<span class="normal">908</span>
+<span class="normal">909</span>
+<span class="normal">910</span>
+<span class="normal">911</span>
+<span class="normal">912</span>
+<span class="normal">913</span>
+<span class="normal">914</span>
+<span class="normal">915</span>
+<span class="normal">916</span>
+<span class="normal">917</span>
+<span class="normal">918</span>
+<span class="normal">919</span>
+<span class="normal">920</span>
+<span class="normal">921</span>
+<span class="normal">922</span>
+<span class="normal">923</span>
+<span class="normal">924</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">distX</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Fit the vector quantizer using the specified method.</span>
 
@@ -1415,56 +1503,56 @@ W must match it; otherwise d is inferred from W.</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1359</span>
-<span class="normal">1360</span>
-<span class="normal">1361</span>
-<span class="normal">1362</span>
-<span class="normal">1363</span>
-<span class="normal">1364</span>
-<span class="normal">1365</span>
-<span class="normal">1366</span>
-<span class="normal">1367</span>
-<span class="normal">1368</span>
-<span class="normal">1369</span>
-<span class="normal">1370</span>
-<span class="normal">1371</span>
-<span class="normal">1372</span>
-<span class="normal">1373</span>
-<span class="normal">1374</span>
-<span class="normal">1375</span>
-<span class="normal">1376</span>
-<span class="normal">1377</span>
-<span class="normal">1378</span>
-<span class="normal">1379</span>
-<span class="normal">1380</span>
-<span class="normal">1381</span>
-<span class="normal">1382</span>
-<span class="normal">1383</span>
-<span class="normal">1384</span>
-<span class="normal">1385</span>
-<span class="normal">1386</span>
-<span class="normal">1387</span>
-<span class="normal">1388</span>
-<span class="normal">1389</span>
-<span class="normal">1390</span>
-<span class="normal">1391</span>
-<span class="normal">1392</span>
-<span class="normal">1393</span>
-<span class="normal">1394</span>
-<span class="normal">1395</span>
-<span class="normal">1396</span>
-<span class="normal">1397</span>
-<span class="normal">1398</span>
-<span class="normal">1399</span>
-<span class="normal">1400</span>
-<span class="normal">1401</span>
-<span class="normal">1402</span>
-<span class="normal">1403</span>
-<span class="normal">1404</span>
-<span class="normal">1405</span>
-<span class="normal">1406</span>
-<span class="normal">1407</span>
-<span class="normal">1408</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">set_prototypes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1254</span>
+<span class="normal">1255</span>
+<span class="normal">1256</span>
+<span class="normal">1257</span>
+<span class="normal">1258</span>
+<span class="normal">1259</span>
+<span class="normal">1260</span>
+<span class="normal">1261</span>
+<span class="normal">1262</span>
+<span class="normal">1263</span>
+<span class="normal">1264</span>
+<span class="normal">1265</span>
+<span class="normal">1266</span>
+<span class="normal">1267</span>
+<span class="normal">1268</span>
+<span class="normal">1269</span>
+<span class="normal">1270</span>
+<span class="normal">1271</span>
+<span class="normal">1272</span>
+<span class="normal">1273</span>
+<span class="normal">1274</span>
+<span class="normal">1275</span>
+<span class="normal">1276</span>
+<span class="normal">1277</span>
+<span class="normal">1278</span>
+<span class="normal">1279</span>
+<span class="normal">1280</span>
+<span class="normal">1281</span>
+<span class="normal">1282</span>
+<span class="normal">1283</span>
+<span class="normal">1284</span>
+<span class="normal">1285</span>
+<span class="normal">1286</span>
+<span class="normal">1287</span>
+<span class="normal">1288</span>
+<span class="normal">1289</span>
+<span class="normal">1290</span>
+<span class="normal">1291</span>
+<span class="normal">1292</span>
+<span class="normal">1293</span>
+<span class="normal">1294</span>
+<span class="normal">1295</span>
+<span class="normal">1296</span>
+<span class="normal">1297</span>
+<span class="normal">1298</span>
+<span class="normal">1299</span>
+<span class="normal">1300</span>
+<span class="normal">1301</span>
+<span class="normal">1302</span>
+<span class="normal">1303</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">set_prototypes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Set the prototype matrix W directly, bypassing fitting.</span>
 
@@ -1623,48 +1711,48 @@ the main recall pipeline to compute WL, WL_Dist, and WL_Purity.</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1410</span>
-<span class="normal">1411</span>
-<span class="normal">1412</span>
-<span class="normal">1413</span>
-<span class="normal">1414</span>
-<span class="normal">1415</span>
-<span class="normal">1416</span>
-<span class="normal">1417</span>
-<span class="normal">1418</span>
-<span class="normal">1419</span>
-<span class="normal">1420</span>
-<span class="normal">1421</span>
-<span class="normal">1422</span>
-<span class="normal">1423</span>
-<span class="normal">1424</span>
-<span class="normal">1425</span>
-<span class="normal">1426</span>
-<span class="normal">1427</span>
-<span class="normal">1428</span>
-<span class="normal">1429</span>
-<span class="normal">1430</span>
-<span class="normal">1431</span>
-<span class="normal">1432</span>
-<span class="normal">1433</span>
-<span class="normal">1434</span>
-<span class="normal">1435</span>
-<span class="normal">1436</span>
-<span class="normal">1437</span>
-<span class="normal">1438</span>
-<span class="normal">1439</span>
-<span class="normal">1440</span>
-<span class="normal">1441</span>
-<span class="normal">1442</span>
-<span class="normal">1443</span>
-<span class="normal">1444</span>
-<span class="normal">1445</span>
-<span class="normal">1446</span>
-<span class="normal">1447</span>
-<span class="normal">1448</span>
-<span class="normal">1449</span>
-<span class="normal">1450</span>
-<span class="normal">1451</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1305</span>
+<span class="normal">1306</span>
+<span class="normal">1307</span>
+<span class="normal">1308</span>
+<span class="normal">1309</span>
+<span class="normal">1310</span>
+<span class="normal">1311</span>
+<span class="normal">1312</span>
+<span class="normal">1313</span>
+<span class="normal">1314</span>
+<span class="normal">1315</span>
+<span class="normal">1316</span>
+<span class="normal">1317</span>
+<span class="normal">1318</span>
+<span class="normal">1319</span>
+<span class="normal">1320</span>
+<span class="normal">1321</span>
+<span class="normal">1322</span>
+<span class="normal">1323</span>
+<span class="normal">1324</span>
+<span class="normal">1325</span>
+<span class="normal">1326</span>
+<span class="normal">1327</span>
+<span class="normal">1328</span>
+<span class="normal">1329</span>
+<span class="normal">1330</span>
+<span class="normal">1331</span>
+<span class="normal">1332</span>
+<span class="normal">1333</span>
+<span class="normal">1334</span>
+<span class="normal">1335</span>
+<span class="normal">1336</span>
+<span class="normal">1337</span>
+<span class="normal">1338</span>
+<span class="normal">1339</span>
+<span class="normal">1340</span>
+<span class="normal">1341</span>
+<span class="normal">1342</span>
+<span class="normal">1343</span>
+<span class="normal">1344</span>
+<span class="normal">1345</span>
+<span class="normal">1346</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Perform recall analysis using the fitted prototypes.</span>
 
@@ -1748,7 +1836,7 @@ the main recall pipeline to compute WL, WL_Dist, and WL_Purity.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Path to the HDF5 file to create (or overwrite).</p>
+                <p>Destination file path.  Created or overwritten.</p>
               </div>
             </td>
             <td>
@@ -1759,23 +1847,10 @@ the main recall pipeline to compute WL, WL_Dist, and WL_Purity.</p>
     </table>
 
 
-<details class="note" open>
-  <summary>Notes</summary>
-  <p>The file contains two top-level groups: <code>/fitter</code> for the VQFitter's
-own attributes (hyperparameters and prototype matrix W), and
-<code>/recaller</code> for the full VQRecaller state.  This means the embedded
-recaller is always saved alongside the fitter, in whatever state it is
-in (including None attributes if recall() has not yet been called).</p>
-<p>The RNG state (<code>self._rng</code>) is not saved.  On load, the RNG is
-re-initialized from <code>random_state</code>, so post-load fitting calls will
-be reproducible but will not continue from the exact RNG position at
-save time.</p>
-</details>
-
 <details class="see-also" open>
   <summary>See Also</summary>
-  <p>VQFitter.load    : Reconstruct a VQFitter from a saved file.
-VQRecaller.save  : Save a standalone VQRecaller.</p>
+  <p>VQFitter.load   : Reconstruct a VQFitter from a saved file.
+VQRecaller.save : Save a standalone VQRecaller.</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
@@ -1786,107 +1861,47 @@ VQRecaller.save  : Save a standalone VQRecaller.</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1453</span>
-<span class="normal">1454</span>
-<span class="normal">1455</span>
-<span class="normal">1456</span>
-<span class="normal">1457</span>
-<span class="normal">1458</span>
-<span class="normal">1459</span>
-<span class="normal">1460</span>
-<span class="normal">1461</span>
-<span class="normal">1462</span>
-<span class="normal">1463</span>
-<span class="normal">1464</span>
-<span class="normal">1465</span>
-<span class="normal">1466</span>
-<span class="normal">1467</span>
-<span class="normal">1468</span>
-<span class="normal">1469</span>
-<span class="normal">1470</span>
-<span class="normal">1471</span>
-<span class="normal">1472</span>
-<span class="normal">1473</span>
-<span class="normal">1474</span>
-<span class="normal">1475</span>
-<span class="normal">1476</span>
-<span class="normal">1477</span>
-<span class="normal">1478</span>
-<span class="normal">1479</span>
-<span class="normal">1480</span>
-<span class="normal">1481</span>
-<span class="normal">1482</span>
-<span class="normal">1483</span>
-<span class="normal">1484</span>
-<span class="normal">1485</span>
-<span class="normal">1486</span>
-<span class="normal">1487</span>
-<span class="normal">1488</span>
-<span class="normal">1489</span>
-<span class="normal">1490</span>
-<span class="normal">1491</span>
-<span class="normal">1492</span>
-<span class="normal">1493</span>
-<span class="normal">1494</span>
-<span class="normal">1495</span>
-<span class="normal">1496</span>
-<span class="normal">1497</span>
-<span class="normal">1498</span>
-<span class="normal">1499</span>
-<span class="normal">1500</span>
-<span class="normal">1501</span>
-<span class="normal">1502</span>
-<span class="normal">1503</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1348</span>
+<span class="normal">1349</span>
+<span class="normal">1350</span>
+<span class="normal">1351</span>
+<span class="normal">1352</span>
+<span class="normal">1353</span>
+<span class="normal">1354</span>
+<span class="normal">1355</span>
+<span class="normal">1356</span>
+<span class="normal">1357</span>
+<span class="normal">1358</span>
+<span class="normal">1359</span>
+<span class="normal">1360</span>
+<span class="normal">1361</span>
+<span class="normal">1362</span>
+<span class="normal">1363</span>
+<span class="normal">1364</span>
+<span class="normal">1365</span>
+<span class="normal">1366</span>
+<span class="normal">1367</span>
+<span class="normal">1368</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Save the VQFitter (and its embedded VQRecaller) to an HDF5 file.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    path : str</span>
-<span class="sd">        Path to the HDF5 file to create (or overwrite).</span>
-
-<span class="sd">    Notes</span>
-<span class="sd">    -----</span>
-<span class="sd">    The file contains two top-level groups: ``/fitter`` for the VQFitter&#39;s</span>
-<span class="sd">    own attributes (hyperparameters and prototype matrix W), and</span>
-<span class="sd">    ``/recaller`` for the full VQRecaller state.  This means the embedded</span>
-<span class="sd">    recaller is always saved alongside the fitter, in whatever state it is</span>
-<span class="sd">    in (including None attributes if recall() has not yet been called).</span>
-
-<span class="sd">    The RNG state (``self._rng``) is not saved.  On load, the RNG is</span>
-<span class="sd">    re-initialized from ``random_state``, so post-load fitting calls will</span>
-<span class="sd">    be reproducible but will not continue from the exact RNG position at</span>
-<span class="sd">    save time.</span>
+<span class="sd">        Destination file path.  Created or overwritten.</span>
 
 <span class="sd">    See Also</span>
 <span class="sd">    --------</span>
-<span class="sd">    VQFitter.load    : Reconstruct a VQFitter from a saved file.</span>
-<span class="sd">    VQRecaller.save  : Save a standalone VQRecaller.</span>
+<span class="sd">    VQFitter.load   : Reconstruct a VQFitter from a saved file.</span>
+<span class="sd">    VQRecaller.save : Save a standalone VQRecaller.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; fitter.save(&quot;fitter.h5&quot;)</span>
 <span class="sd">    &gt;&gt;&gt; fitter2 = VQFitter.load(&quot;fitter.h5&quot;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">vqlp</span><span class="w"> </span><span class="kn">import</span> <span class="n">__version__</span>
-    <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;vqlp_version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">__version__</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]</span>        <span class="o">=</span> <span class="s2">&quot;VQFitter&quot;</span>
-
-        <span class="c1"># --- Fitter group ---</span>
-        <span class="n">fg</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span><span class="s2">&quot;fitter&quot;</span><span class="p">)</span>
-        <span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;M&quot;</span><span class="p">]</span>            <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">M</span>
-        <span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">]</span>            <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p</span>
-        <span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;max_bmu&quot;</span><span class="p">]</span>      <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_bmu</span>
-        <span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;verbose&quot;</span><span class="p">]</span>      <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
-        <span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;random_state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
-
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">fg</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="p">)</span>
-
-        <span class="c1"># --- Recaller group (always present, may be empty) ---</span>
-        <span class="n">rg</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span><span class="s2">&quot;recaller&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">recaller</span><span class="o">.</span><span class="n">_save_to_group</span><span class="p">(</span><span class="n">rg</span><span class="p">)</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">VQFitterIO</span>
+    <span class="n">VQFitterIO</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -1910,7 +1925,8 @@ VQRecaller.save  : Save a standalone VQRecaller.</p>
 
     <div class="doc doc-contents ">
 
-        <p>Load a VQFitter (and its embedded VQRecaller) from an HDF5 file.</p>
+        <p>Load a VQFitter (and its embedded VQRecaller) from an HDF5 file
+created by :meth:<code>save</code>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1933,7 +1949,7 @@ VQRecaller.save  : Save a standalone VQRecaller.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Path to an HDF5 file previously created by VQFitter.save().</p>
+                <p>Path to the HDF5 file.</p>
               </div>
             </td>
             <td>
@@ -1959,9 +1975,7 @@ VQRecaller.save  : Save a standalone VQRecaller.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>A fully reconstructed instance in whatever state it was in when
-saved.  Call as a classmethod — no need to instantiate first:
-<code>fitter = VQFitter.load("fitter.h5")</code>.</p>
+                
               </div>
             </td>
           </tr>
@@ -1969,143 +1983,305 @@ saved.  Call as a classmethod — no need to instantiate first:
     </table>
 
 
-<details class="note" open>
-  <summary>Notes</summary>
-  <p>The embedded VQRecaller is reconstructed automatically and available
-as <code>fitter.recaller</code> immediately after load.  Attributes that were
-None when saved (e.g. W before fit(), or recall products before
-recall()) are restored as None.</p>
-<p>The RNG is re-initialized from <code>random_state</code> rather than restored
-to its exact saved state.  See VQFitter.save() for details.</p>
-</details>
-
-<details class="see-also" open>
-  <summary>See Also</summary>
-  <p>VQFitter.save   : Save a VQFitter to an HDF5 file.
-VQRecaller.load : Load a standalone VQRecaller.</p>
-</details>
-
 <p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fitter</span> <span class="o">=</span> <span class="n">VQFitter</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;fitter.h5&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fitter</span><span class="o">.</span><span class="n">W</span>              <span class="c1"># prototype matrix, ready to use</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fitter</span><span class="o">.</span><span class="n">W</span>              <span class="c1"># prototype matrix</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fitter</span><span class="o">.</span><span class="n">recaller</span><span class="o">.</span><span class="n">BMU</span>   <span class="c1"># recall products, if recall() was called before saving</span>
 </code></pre></div>
 
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1505</span>
-<span class="normal">1506</span>
-<span class="normal">1507</span>
-<span class="normal">1508</span>
-<span class="normal">1509</span>
-<span class="normal">1510</span>
-<span class="normal">1511</span>
-<span class="normal">1512</span>
-<span class="normal">1513</span>
-<span class="normal">1514</span>
-<span class="normal">1515</span>
-<span class="normal">1516</span>
-<span class="normal">1517</span>
-<span class="normal">1518</span>
-<span class="normal">1519</span>
-<span class="normal">1520</span>
-<span class="normal">1521</span>
-<span class="normal">1522</span>
-<span class="normal">1523</span>
-<span class="normal">1524</span>
-<span class="normal">1525</span>
-<span class="normal">1526</span>
-<span class="normal">1527</span>
-<span class="normal">1528</span>
-<span class="normal">1529</span>
-<span class="normal">1530</span>
-<span class="normal">1531</span>
-<span class="normal">1532</span>
-<span class="normal">1533</span>
-<span class="normal">1534</span>
-<span class="normal">1535</span>
-<span class="normal">1536</span>
-<span class="normal">1537</span>
-<span class="normal">1538</span>
-<span class="normal">1539</span>
-<span class="normal">1540</span>
-<span class="normal">1541</span>
-<span class="normal">1542</span>
-<span class="normal">1543</span>
-<span class="normal">1544</span>
-<span class="normal">1545</span>
-<span class="normal">1546</span>
-<span class="normal">1547</span>
-<span class="normal">1548</span>
-<span class="normal">1549</span>
-<span class="normal">1550</span>
-<span class="normal">1551</span>
-<span class="normal">1552</span>
-<span class="normal">1553</span>
-<span class="normal">1554</span>
-<span class="normal">1555</span>
-<span class="normal">1556</span>
-<span class="normal">1557</span>
-<span class="normal">1558</span>
-<span class="normal">1559</span>
-<span class="normal">1560</span>
-<span class="normal">1561</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1370</span>
+<span class="normal">1371</span>
+<span class="normal">1372</span>
+<span class="normal">1373</span>
+<span class="normal">1374</span>
+<span class="normal">1375</span>
+<span class="normal">1376</span>
+<span class="normal">1377</span>
+<span class="normal">1378</span>
+<span class="normal">1379</span>
+<span class="normal">1380</span>
+<span class="normal">1381</span>
+<span class="normal">1382</span>
+<span class="normal">1383</span>
+<span class="normal">1384</span>
+<span class="normal">1385</span>
+<span class="normal">1386</span>
+<span class="normal">1387</span>
+<span class="normal">1388</span>
+<span class="normal">1389</span>
+<span class="normal">1390</span>
+<span class="normal">1391</span>
+<span class="normal">1392</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Load a VQFitter (and its embedded VQRecaller) from an HDF5 file.</span>
+<span class="sd">    Load a VQFitter (and its embedded VQRecaller) from an HDF5 file</span>
+<span class="sd">    created by :meth:`save`.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    path : str</span>
-<span class="sd">        Path to an HDF5 file previously created by VQFitter.save().</span>
+<span class="sd">        Path to the HDF5 file.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    VQFitter</span>
-<span class="sd">        A fully reconstructed instance in whatever state it was in when</span>
-<span class="sd">        saved.  Call as a classmethod — no need to instantiate first:</span>
-<span class="sd">        ``fitter = VQFitter.load(&quot;fitter.h5&quot;)``.</span>
-
-<span class="sd">    Notes</span>
-<span class="sd">    -----</span>
-<span class="sd">    The embedded VQRecaller is reconstructed automatically and available</span>
-<span class="sd">    as ``fitter.recaller`` immediately after load.  Attributes that were</span>
-<span class="sd">    None when saved (e.g. W before fit(), or recall products before</span>
-<span class="sd">    recall()) are restored as None.</span>
-
-<span class="sd">    The RNG is re-initialized from ``random_state`` rather than restored</span>
-<span class="sd">    to its exact saved state.  See VQFitter.save() for details.</span>
-
-<span class="sd">    See Also</span>
-<span class="sd">    --------</span>
-<span class="sd">    VQFitter.save   : Save a VQFitter to an HDF5 file.</span>
-<span class="sd">    VQRecaller.load : Load a standalone VQRecaller.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; fitter = VQFitter.load(&quot;fitter.h5&quot;)</span>
-<span class="sd">    &gt;&gt;&gt; fitter.W              # prototype matrix, ready to use</span>
+<span class="sd">    &gt;&gt;&gt; fitter.W              # prototype matrix</span>
 <span class="sd">    &gt;&gt;&gt; fitter.recaller.BMU   # recall products, if recall() was called before saving</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">fg</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s2">&quot;fitter&quot;</span><span class="p">]</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">VQFitterIO</span>
+    <span class="k">return</span> <span class="n">VQFitterIO</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
 
-        <span class="c1"># Reconstruct without calling __init__</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
-        <span class="n">obj</span><span class="o">.</span><span class="n">M</span>            <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;M&quot;</span><span class="p">])</span>
-        <span class="n">obj</span><span class="o">.</span><span class="n">p</span>            <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">])</span>
-        <span class="n">obj</span><span class="o">.</span><span class="n">max_bmu</span>      <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;max_bmu&quot;</span><span class="p">])</span>
-        <span class="n">obj</span><span class="o">.</span><span class="n">verbose</span>      <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;verbose&quot;</span><span class="p">])</span>
-        <span class="n">rs</span>               <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fg</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;random_state&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-        <span class="n">obj</span><span class="o">.</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">rs</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="kc">None</span>
+</div>
 
-        <span class="n">obj</span><span class="o">.</span><span class="n">W</span>   <span class="o">=</span> <span class="n">fg</span><span class="p">[</span><span class="s2">&quot;W&quot;</span><span class="p">][:]</span> <span class="k">if</span> <span class="s2">&quot;W&quot;</span> <span class="ow">in</span> <span class="n">fg</span> <span class="k">else</span> <span class="kc">None</span>
-        <span class="n">obj</span><span class="o">.</span><span class="n">_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">random_state</span><span class="p">)</span>
+<div class="doc doc-object doc-function">
 
-        <span class="c1"># Reconstruct embedded recaller</span>
-        <span class="n">obj</span><span class="o">.</span><span class="n">recaller</span> <span class="o">=</span> <span class="n">VQRecaller</span><span class="o">.</span><span class="n">_load_from_group</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="s2">&quot;recaller&quot;</span><span class="p">])</span>
 
+<h3 id="vqlp.VQFitter.to_dict" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">to_dict</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">to_dict</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Return a plain dict representation of this VQFitter.</p>
+<p>Only hyperparameters and the prototype matrix W are included.
+The embedded recaller is serialized separately by VQFitterIO.
+The RNG (<code>_rng</code>) is not stored; on load it is re-initialized
+from <code>random_state</code>.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>dict with keys: M, p, max_bmu, verbose, random_state, W</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/vqlp/vq.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1398</span>
+<span class="normal">1399</span>
+<span class="normal">1400</span>
+<span class="normal">1401</span>
+<span class="normal">1402</span>
+<span class="normal">1403</span>
+<span class="normal">1404</span>
+<span class="normal">1405</span>
+<span class="normal">1406</span>
+<span class="normal">1407</span>
+<span class="normal">1408</span>
+<span class="normal">1409</span>
+<span class="normal">1410</span>
+<span class="normal">1411</span>
+<span class="normal">1412</span>
+<span class="normal">1413</span>
+<span class="normal">1414</span>
+<span class="normal">1415</span>
+<span class="normal">1416</span>
+<span class="normal">1417</span>
+<span class="normal">1418</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a plain dict representation of this VQFitter.</span>
+
+<span class="sd">    Only hyperparameters and the prototype matrix W are included.</span>
+<span class="sd">    The embedded recaller is serialized separately by VQFitterIO.</span>
+<span class="sd">    The RNG (``_rng``) is not stored; on load it is re-initialized</span>
+<span class="sd">    from ``random_state``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dict with keys: M, p, max_bmu, verbose, random_state, W</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;M&quot;</span><span class="p">:</span>            <span class="bp">self</span><span class="o">.</span><span class="n">M</span><span class="p">,</span>
+        <span class="s2">&quot;p&quot;</span><span class="p">:</span>            <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">,</span>
+        <span class="s2">&quot;max_bmu&quot;</span><span class="p">:</span>      <span class="bp">self</span><span class="o">.</span><span class="n">max_bmu</span><span class="p">,</span>
+        <span class="s2">&quot;verbose&quot;</span><span class="p">:</span>      <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
+        <span class="s2">&quot;random_state&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span><span class="p">,</span>
+        <span class="s2">&quot;W&quot;</span><span class="p">:</span>            <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="p">,</span>
+    <span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="vqlp.VQFitter.from_dict" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">from_dict</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">from_dict</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Reconstruct a VQFitter from a dict produced by :meth:<code>to_dict</code>.</p>
+<p>Bypasses <code>__init__</code> so that hyperparameters are restored directly.
+The RNG is re-initialized from <code>random_state</code>.</p>
+<p>Note: <code>recaller</code> is set to <code>None</code> by this method.
+:meth:<code>VQFitterIO.load</code> attaches the reconstructed VQRecaller after
+calling <code>from_dict</code>.  If you call <code>from_dict</code> directly, you are
+responsible for setting <code>obj.recaller</code> before calling any method
+that depends on it.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>d</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>As returned by :meth:<code>to_dict</code>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="vqlp.VQFitter (vqlp.vq.VQFitter)" href="#vqlp.VQFitter">VQFitter</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/vqlp/vq.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1420</span>
+<span class="normal">1421</span>
+<span class="normal">1422</span>
+<span class="normal">1423</span>
+<span class="normal">1424</span>
+<span class="normal">1425</span>
+<span class="normal">1426</span>
+<span class="normal">1427</span>
+<span class="normal">1428</span>
+<span class="normal">1429</span>
+<span class="normal">1430</span>
+<span class="normal">1431</span>
+<span class="normal">1432</span>
+<span class="normal">1433</span>
+<span class="normal">1434</span>
+<span class="normal">1435</span>
+<span class="normal">1436</span>
+<span class="normal">1437</span>
+<span class="normal">1438</span>
+<span class="normal">1439</span>
+<span class="normal">1440</span>
+<span class="normal">1441</span>
+<span class="normal">1442</span>
+<span class="normal">1443</span>
+<span class="normal">1444</span>
+<span class="normal">1445</span>
+<span class="normal">1446</span>
+<span class="normal">1447</span>
+<span class="normal">1448</span>
+<span class="normal">1449</span>
+<span class="normal">1450</span>
+<span class="normal">1451</span>
+<span class="normal">1452</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reconstruct a VQFitter from a dict produced by :meth:`to_dict`.</span>
+
+<span class="sd">    Bypasses ``__init__`` so that hyperparameters are restored directly.</span>
+<span class="sd">    The RNG is re-initialized from ``random_state``.</span>
+
+<span class="sd">    Note: ``recaller`` is set to ``None`` by this method.</span>
+<span class="sd">    :meth:`VQFitterIO.load` attaches the reconstructed VQRecaller after</span>
+<span class="sd">    calling ``from_dict``.  If you call ``from_dict`` directly, you are</span>
+<span class="sd">    responsible for setting ``obj.recaller`` before calling any method</span>
+<span class="sd">    that depends on it.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    d : dict</span>
+<span class="sd">        As returned by :meth:`to_dict`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    VQFitter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">obj</span>              <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">M</span>            <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;M&quot;</span><span class="p">])</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">p</span>            <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">])</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">max_bmu</span>      <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;max_bmu&quot;</span><span class="p">])</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">verbose</span>      <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;verbose&quot;</span><span class="p">])</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;random_state&quot;</span><span class="p">)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">W</span>            <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;W&quot;</span><span class="p">)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">_rng</span>         <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">random_state</span><span class="p">)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">recaller</span>     <span class="o">=</span> <span class="kc">None</span>   <span class="c1"># attached by VQFitterIO.load()</span>
     <span class="k">return</span> <span class="n">obj</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -2162,38 +2338,38 @@ are also included (MQE, RF sizes, connectivity stats, etc.).</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1563</span>
-<span class="normal">1564</span>
-<span class="normal">1565</span>
-<span class="normal">1566</span>
-<span class="normal">1567</span>
-<span class="normal">1568</span>
-<span class="normal">1569</span>
-<span class="normal">1570</span>
-<span class="normal">1571</span>
-<span class="normal">1572</span>
-<span class="normal">1573</span>
-<span class="normal">1574</span>
-<span class="normal">1575</span>
-<span class="normal">1576</span>
-<span class="normal">1577</span>
-<span class="normal">1578</span>
-<span class="normal">1579</span>
-<span class="normal">1580</span>
-<span class="normal">1581</span>
-<span class="normal">1582</span>
-<span class="normal">1583</span>
-<span class="normal">1584</span>
-<span class="normal">1585</span>
-<span class="normal">1586</span>
-<span class="normal">1587</span>
-<span class="normal">1588</span>
-<span class="normal">1589</span>
-<span class="normal">1590</span>
-<span class="normal">1591</span>
-<span class="normal">1592</span>
-<span class="normal">1593</span>
-<span class="normal">1594</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1454</span>
+<span class="normal">1455</span>
+<span class="normal">1456</span>
+<span class="normal">1457</span>
+<span class="normal">1458</span>
+<span class="normal">1459</span>
+<span class="normal">1460</span>
+<span class="normal">1461</span>
+<span class="normal">1462</span>
+<span class="normal">1463</span>
+<span class="normal">1464</span>
+<span class="normal">1465</span>
+<span class="normal">1466</span>
+<span class="normal">1467</span>
+<span class="normal">1468</span>
+<span class="normal">1469</span>
+<span class="normal">1470</span>
+<span class="normal">1471</span>
+<span class="normal">1472</span>
+<span class="normal">1473</span>
+<span class="normal">1474</span>
+<span class="normal">1475</span>
+<span class="normal">1476</span>
+<span class="normal">1477</span>
+<span class="normal">1478</span>
+<span class="normal">1479</span>
+<span class="normal">1480</span>
+<span class="normal">1481</span>
+<span class="normal">1482</span>
+<span class="normal">1483</span>
+<span class="normal">1484</span>
+<span class="normal">1485</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get a summary of the fitted model and recall analysis.</span>
 
@@ -2428,7 +2604,8 @@ Set to False to suppress all terminal output.</p>
 
                   <details class="quote">
                     <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 64</span>
+                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 63</span>
+<span class="normal"> 64</span>
 <span class="normal"> 65</span>
 <span class="normal"> 66</span>
 <span class="normal"> 67</span>
@@ -2495,8 +2672,7 @@ Set to False to suppress all terminal output.</p>
 <span class="normal">128</span>
 <span class="normal">129</span>
 <span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_bmu</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">index_type</span><span class="o">=</span><span class="s2">&quot;flat&quot;</span><span class="p">,</span> <span class="n">nlist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nprobe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="normal">131</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_bmu</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">index_type</span><span class="o">=</span><span class="s2">&quot;flat&quot;</span><span class="p">,</span> <span class="n">nlist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nprobe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Initialize VQRecaller.</span>
 
@@ -2723,7 +2899,8 @@ recall_labels() on an already-recalled object.</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">134</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">133</span>
+<span class="normal">134</span>
 <span class="normal">135</span>
 <span class="normal">136</span>
 <span class="normal">137</span>
@@ -2788,8 +2965,7 @@ recall_labels() on an already-recalled object.</p>
 <span class="normal">196</span>
 <span class="normal">197</span>
 <span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">W</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_bmu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="normal">199</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">W</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_bmu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Perform recall analysis. Can operate in two modes:</span>
 
@@ -2929,7 +3105,8 @@ Can be called repeatedly during iterative fitting algorithms.</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">202</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">201</span>
+<span class="normal">202</span>
 <span class="normal">203</span>
 <span class="normal">204</span>
 <span class="normal">205</span>
@@ -2963,8 +3140,7 @@ Can be called repeatedly during iterative fitting algorithms.</p>
 <span class="normal">233</span>
 <span class="normal">234</span>
 <span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">update_BMU</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
+<span class="normal">236</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">update_BMU</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Update Best Matching Units (BMU) and Quantization Errors (QE) via FAISS.</span>
 
@@ -3106,7 +3282,8 @@ WL_unq : np.ndarray, shape (n_unique_labels,)
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">374</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">373</span>
+<span class="normal">374</span>
 <span class="normal">375</span>
 <span class="normal">376</span>
 <span class="normal">377</span>
@@ -3211,8 +3388,7 @@ WL_unq : np.ndarray, shape (n_unique_labels,)
 <span class="normal">476</span>
 <span class="normal">477</span>
 <span class="normal">478</span>
-<span class="normal">479</span>
-<span class="normal">480</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recall_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+<span class="normal">479</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recall_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Compute per-prototype label summaries from observation labels.</span>
 
@@ -3433,7 +3609,8 @@ WL_unq : np.ndarray, shape (n_unique_labels,)
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">482</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">481</span>
+<span class="normal">482</span>
 <span class="normal">483</span>
 <span class="normal">484</span>
 <span class="normal">485</span>
@@ -3472,8 +3649,7 @@ WL_unq : np.ndarray, shape (n_unique_labels,)
 <span class="normal">518</span>
 <span class="normal">519</span>
 <span class="normal">520</span>
-<span class="normal">521</span>
-<span class="normal">522</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">reconstruct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;hard&quot;</span><span class="p">):</span>
+<span class="normal">521</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">reconstruct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;hard&quot;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Reconstruct data using the quantizer.</span>
 
@@ -3528,12 +3704,12 @@ WL_unq : np.ndarray, shape (n_unique_labels,)
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">save</span><span class="p">(</span><span class="n">path_or_group</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">save</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Save the VQRecaller to an HDF5 file or group.</p>
+        <p>Save the VQRecaller to an HDF5 file.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3549,17 +3725,14 @@ WL_unq : np.ndarray, shape (n_unique_labels,)
       <tbody>
           <tr class="doc-section-item">
             <td>
-                <code>path_or_group</code>
+                <code>path</code>
             </td>
             <td>
-                  <code><span title="str">str</span> or <span title="h5py.Group">Group</span></code>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>If a string, opens (or creates) an HDF5 file at that path and
-writes into its root group.  If an h5py.Group, writes directly
-into that group — used internally by VQFitter.save() to embed
-the recaller in the fitter's file.</p>
+                <p>Destination file path.  Created or overwritten.</p>
               </div>
             </td>
             <td>
@@ -3570,18 +3743,9 @@ the recaller in the fitter's file.</p>
     </table>
 
 
-<details class="note" open>
-  <summary>Notes</summary>
-  <p>All attributes are saved regardless of whether recall() has been
-called; None-valued attributes are simply omitted from the file and
-restored as None on load.  The package version is stored as a file
-attribute to assist with forward-compatibility checking.</p>
-</details>
-
 <details class="see-also" open>
   <summary>See Also</summary>
-  <p>VQRecaller.load : Reconstruct a VQRecaller from a saved file.
-VQFitter.save   : Save a VQFitter together with its embedded recaller.</p>
+  <p>VQRecaller.load : Reconstruct a VQRecaller from a saved file.</p>
 </details>
 
 <p><span class="doc-section-title">Examples:</span></p>
@@ -3592,73 +3756,45 @@ VQFitter.save   : Save a VQFitter together with its embedded recaller.</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">764</span>
-<span class="normal">765</span>
-<span class="normal">766</span>
-<span class="normal">767</span>
-<span class="normal">768</span>
-<span class="normal">769</span>
-<span class="normal">770</span>
-<span class="normal">771</span>
-<span class="normal">772</span>
-<span class="normal">773</span>
-<span class="normal">774</span>
-<span class="normal">775</span>
-<span class="normal">776</span>
-<span class="normal">777</span>
-<span class="normal">778</span>
-<span class="normal">779</span>
-<span class="normal">780</span>
-<span class="normal">781</span>
-<span class="normal">782</span>
-<span class="normal">783</span>
-<span class="normal">784</span>
-<span class="normal">785</span>
-<span class="normal">786</span>
-<span class="normal">787</span>
-<span class="normal">788</span>
-<span class="normal">789</span>
-<span class="normal">790</span>
-<span class="normal">791</span>
-<span class="normal">792</span>
-<span class="normal">793</span>
-<span class="normal">794</span>
-<span class="normal">795</span>
-<span class="normal">796</span>
-<span class="normal">797</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path_or_group</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">582</span>
+<span class="normal">583</span>
+<span class="normal">584</span>
+<span class="normal">585</span>
+<span class="normal">586</span>
+<span class="normal">587</span>
+<span class="normal">588</span>
+<span class="normal">589</span>
+<span class="normal">590</span>
+<span class="normal">591</span>
+<span class="normal">592</span>
+<span class="normal">593</span>
+<span class="normal">594</span>
+<span class="normal">595</span>
+<span class="normal">596</span>
+<span class="normal">597</span>
+<span class="normal">598</span>
+<span class="normal">599</span>
+<span class="normal">600</span>
+<span class="normal">601</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Save the VQRecaller to an HDF5 file or group.</span>
+<span class="sd">    Save the VQRecaller to an HDF5 file.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    path_or_group : str or h5py.Group</span>
-<span class="sd">        If a string, opens (or creates) an HDF5 file at that path and</span>
-<span class="sd">        writes into its root group.  If an h5py.Group, writes directly</span>
-<span class="sd">        into that group — used internally by VQFitter.save() to embed</span>
-<span class="sd">        the recaller in the fitter&#39;s file.</span>
-
-<span class="sd">    Notes</span>
-<span class="sd">    -----</span>
-<span class="sd">    All attributes are saved regardless of whether recall() has been</span>
-<span class="sd">    called; None-valued attributes are simply omitted from the file and</span>
-<span class="sd">    restored as None on load.  The package version is stored as a file</span>
-<span class="sd">    attribute to assist with forward-compatibility checking.</span>
+<span class="sd">    path : str</span>
+<span class="sd">        Destination file path.  Created or overwritten.</span>
 
 <span class="sd">    See Also</span>
 <span class="sd">    --------</span>
 <span class="sd">    VQRecaller.load : Reconstruct a VQRecaller from a saved file.</span>
-<span class="sd">    VQFitter.save   : Save a VQFitter together with its embedded recaller.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; recaller.save(&quot;recaller.h5&quot;)</span>
 <span class="sd">    &gt;&gt;&gt; recaller2 = VQRecaller.load(&quot;recaller.h5&quot;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path_or_group</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)):</span>
-        <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">path_or_group</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_save_to_group</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_save_to_group</span><span class="p">(</span><span class="n">path_or_group</span><span class="p">)</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">VQRecallerIO</span>
+    <span class="n">VQRecallerIO</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -3677,12 +3813,12 @@ VQFitter.save   : Save a VQFitter together with its embedded recaller.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">load</span><span class="p">(</span><span class="n">path_or_group</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Load a VQRecaller from an HDF5 file or group.</p>
+        <p>Load a VQRecaller from an HDF5 file created by :meth:<code>save</code>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3698,16 +3834,14 @@ VQFitter.save   : Save a VQFitter together with its embedded recaller.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                <code>path_or_group</code>
+                <code>path</code>
             </td>
             <td>
-                  <code><span title="str">str</span> or <span title="h5py.Group">Group</span></code>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>If a string, opens the HDF5 file at that path and reads from its
-root group.  If an h5py.Group, reads directly from that group —
-used internally by VQFitter.load().</p>
+                <p>Path to the HDF5 file.</p>
               </div>
             </td>
             <td>
@@ -3733,28 +3867,13 @@ used internally by VQFitter.load().</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>A fully reconstructed instance in whatever state it was in when
-saved.  No need to instantiate first — call as a classmethod:
-<code>recaller = VQRecaller.load("recaller.h5")</code>.</p>
+                
               </div>
             </td>
           </tr>
       </tbody>
     </table>
 
-
-<details class="note" open>
-  <summary>Notes</summary>
-  <p>Attributes that were None when saved are restored as None.  If the
-file was saved by an older version of vqlp that lacked a particular
-attribute, that attribute is set to None rather than raising an error.</p>
-</details>
-
-<details class="see-also" open>
-  <summary>See Also</summary>
-  <p>VQRecaller.save : Save a VQRecaller to an HDF5 file.
-VQFitter.load   : Load a VQFitter together with its embedded recaller.</p>
-</details>
 
 <p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">recaller</span> <span class="o">=</span> <span class="n">VQRecaller</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;recaller.h5&quot;</span><span class="p">)</span>
@@ -3763,83 +3882,45 @@ VQFitter.load   : Load a VQFitter together with its embedded recaller.</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">799</span>
-<span class="normal">800</span>
-<span class="normal">801</span>
-<span class="normal">802</span>
-<span class="normal">803</span>
-<span class="normal">804</span>
-<span class="normal">805</span>
-<span class="normal">806</span>
-<span class="normal">807</span>
-<span class="normal">808</span>
-<span class="normal">809</span>
-<span class="normal">810</span>
-<span class="normal">811</span>
-<span class="normal">812</span>
-<span class="normal">813</span>
-<span class="normal">814</span>
-<span class="normal">815</span>
-<span class="normal">816</span>
-<span class="normal">817</span>
-<span class="normal">818</span>
-<span class="normal">819</span>
-<span class="normal">820</span>
-<span class="normal">821</span>
-<span class="normal">822</span>
-<span class="normal">823</span>
-<span class="normal">824</span>
-<span class="normal">825</span>
-<span class="normal">826</span>
-<span class="normal">827</span>
-<span class="normal">828</span>
-<span class="normal">829</span>
-<span class="normal">830</span>
-<span class="normal">831</span>
-<span class="normal">832</span>
-<span class="normal">833</span>
-<span class="normal">834</span>
-<span class="normal">835</span>
-<span class="normal">836</span>
-<span class="normal">837</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">path_or_group</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">603</span>
+<span class="normal">604</span>
+<span class="normal">605</span>
+<span class="normal">606</span>
+<span class="normal">607</span>
+<span class="normal">608</span>
+<span class="normal">609</span>
+<span class="normal">610</span>
+<span class="normal">611</span>
+<span class="normal">612</span>
+<span class="normal">613</span>
+<span class="normal">614</span>
+<span class="normal">615</span>
+<span class="normal">616</span>
+<span class="normal">617</span>
+<span class="normal">618</span>
+<span class="normal">619</span>
+<span class="normal">620</span>
+<span class="normal">621</span>
+<span class="normal">622</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Load a VQRecaller from an HDF5 file or group.</span>
+<span class="sd">    Load a VQRecaller from an HDF5 file created by :meth:`save`.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    path_or_group : str or h5py.Group</span>
-<span class="sd">        If a string, opens the HDF5 file at that path and reads from its</span>
-<span class="sd">        root group.  If an h5py.Group, reads directly from that group —</span>
-<span class="sd">        used internally by VQFitter.load().</span>
+<span class="sd">    path : str</span>
+<span class="sd">        Path to the HDF5 file.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    VQRecaller</span>
-<span class="sd">        A fully reconstructed instance in whatever state it was in when</span>
-<span class="sd">        saved.  No need to instantiate first — call as a classmethod:</span>
-<span class="sd">        ``recaller = VQRecaller.load(&quot;recaller.h5&quot;)``.</span>
-
-<span class="sd">    Notes</span>
-<span class="sd">    -----</span>
-<span class="sd">    Attributes that were None when saved are restored as None.  If the</span>
-<span class="sd">    file was saved by an older version of vqlp that lacked a particular</span>
-<span class="sd">    attribute, that attribute is set to None rather than raising an error.</span>
-
-<span class="sd">    See Also</span>
-<span class="sd">    --------</span>
-<span class="sd">    VQRecaller.save : Save a VQRecaller to an HDF5 file.</span>
-<span class="sd">    VQFitter.load   : Load a VQFitter together with its embedded recaller.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; recaller = VQRecaller.load(&quot;recaller.h5&quot;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path_or_group</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)):</span>
-        <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">path_or_group</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_load_from_group</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_load_from_group</span><span class="p">(</span><span class="n">path_or_group</span><span class="p">)</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">VQRecallerIO</span>
+    <span class="k">return</span> <span class="n">VQRecallerIO</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -3905,63 +3986,63 @@ VQFitter.load   : Load a VQFitter together with its embedded recaller.</p>
 
             <details class="quote">
               <summary>Source code in <code>src/vqlp/vq.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">839</span>
-<span class="normal">840</span>
-<span class="normal">841</span>
-<span class="normal">842</span>
-<span class="normal">843</span>
-<span class="normal">844</span>
-<span class="normal">845</span>
-<span class="normal">846</span>
-<span class="normal">847</span>
-<span class="normal">848</span>
-<span class="normal">849</span>
-<span class="normal">850</span>
-<span class="normal">851</span>
-<span class="normal">852</span>
-<span class="normal">853</span>
-<span class="normal">854</span>
-<span class="normal">855</span>
-<span class="normal">856</span>
-<span class="normal">857</span>
-<span class="normal">858</span>
-<span class="normal">859</span>
-<span class="normal">860</span>
-<span class="normal">861</span>
-<span class="normal">862</span>
-<span class="normal">863</span>
-<span class="normal">864</span>
-<span class="normal">865</span>
-<span class="normal">866</span>
-<span class="normal">867</span>
-<span class="normal">868</span>
-<span class="normal">869</span>
-<span class="normal">870</span>
-<span class="normal">871</span>
-<span class="normal">872</span>
-<span class="normal">873</span>
-<span class="normal">874</span>
-<span class="normal">875</span>
-<span class="normal">876</span>
-<span class="normal">877</span>
-<span class="normal">878</span>
-<span class="normal">879</span>
-<span class="normal">880</span>
-<span class="normal">881</span>
-<span class="normal">882</span>
-<span class="normal">883</span>
-<span class="normal">884</span>
-<span class="normal">885</span>
-<span class="normal">886</span>
-<span class="normal">887</span>
-<span class="normal">888</span>
-<span class="normal">889</span>
-<span class="normal">890</span>
-<span class="normal">891</span>
-<span class="normal">892</span>
-<span class="normal">893</span>
-<span class="normal">894</span>
-<span class="normal">895</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">624</span>
+<span class="normal">625</span>
+<span class="normal">626</span>
+<span class="normal">627</span>
+<span class="normal">628</span>
+<span class="normal">629</span>
+<span class="normal">630</span>
+<span class="normal">631</span>
+<span class="normal">632</span>
+<span class="normal">633</span>
+<span class="normal">634</span>
+<span class="normal">635</span>
+<span class="normal">636</span>
+<span class="normal">637</span>
+<span class="normal">638</span>
+<span class="normal">639</span>
+<span class="normal">640</span>
+<span class="normal">641</span>
+<span class="normal">642</span>
+<span class="normal">643</span>
+<span class="normal">644</span>
+<span class="normal">645</span>
+<span class="normal">646</span>
+<span class="normal">647</span>
+<span class="normal">648</span>
+<span class="normal">649</span>
+<span class="normal">650</span>
+<span class="normal">651</span>
+<span class="normal">652</span>
+<span class="normal">653</span>
+<span class="normal">654</span>
+<span class="normal">655</span>
+<span class="normal">656</span>
+<span class="normal">657</span>
+<span class="normal">658</span>
+<span class="normal">659</span>
+<span class="normal">660</span>
+<span class="normal">661</span>
+<span class="normal">662</span>
+<span class="normal">663</span>
+<span class="normal">664</span>
+<span class="normal">665</span>
+<span class="normal">666</span>
+<span class="normal">667</span>
+<span class="normal">668</span>
+<span class="normal">669</span>
+<span class="normal">670</span>
+<span class="normal">671</span>
+<span class="normal">672</span>
+<span class="normal">673</span>
+<span class="normal">674</span>
+<span class="normal">675</span>
+<span class="normal">676</span>
+<span class="normal">677</span>
+<span class="normal">678</span>
+<span class="normal">679</span>
+<span class="normal">680</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get a summary of the recall analysis results.</span>
 
@@ -4018,6 +4099,344 @@ VQFitter.load   : Load a VQFitter together with its embedded recaller.</p>
         <span class="p">})</span>
 
     <span class="k">return</span> <span class="n">summary</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="vqlp.VQRecaller.to_dict" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">to_dict</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">to_dict</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Return a plain dict representation of this VQRecaller.</p>
+<p>All values are Python/numpy primitives (arrays, sparse matrices,
+ragged lists, scalars, or None) — no HDF5 types.  Intended for use
+with VQRecallerIO, which handles HDF5 encoding via _write_dict.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/vqlp/vq.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">686</span>
+<span class="normal">687</span>
+<span class="normal">688</span>
+<span class="normal">689</span>
+<span class="normal">690</span>
+<span class="normal">691</span>
+<span class="normal">692</span>
+<span class="normal">693</span>
+<span class="normal">694</span>
+<span class="normal">695</span>
+<span class="normal">696</span>
+<span class="normal">697</span>
+<span class="normal">698</span>
+<span class="normal">699</span>
+<span class="normal">700</span>
+<span class="normal">701</span>
+<span class="normal">702</span>
+<span class="normal">703</span>
+<span class="normal">704</span>
+<span class="normal">705</span>
+<span class="normal">706</span>
+<span class="normal">707</span>
+<span class="normal">708</span>
+<span class="normal">709</span>
+<span class="normal">710</span>
+<span class="normal">711</span>
+<span class="normal">712</span>
+<span class="normal">713</span>
+<span class="normal">714</span>
+<span class="normal">715</span>
+<span class="normal">716</span>
+<span class="normal">717</span>
+<span class="normal">718</span>
+<span class="normal">719</span>
+<span class="normal">720</span>
+<span class="normal">721</span>
+<span class="normal">722</span>
+<span class="normal">723</span>
+<span class="normal">724</span>
+<span class="normal">725</span>
+<span class="normal">726</span>
+<span class="normal">727</span>
+<span class="normal">728</span>
+<span class="normal">729</span>
+<span class="normal">730</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a plain dict representation of this VQRecaller.</span>
+
+<span class="sd">    All values are Python/numpy primitives (arrays, sparse matrices,</span>
+<span class="sd">    ragged lists, scalars, or None) — no HDF5 types.  Intended for use</span>
+<span class="sd">    with VQRecallerIO, which handles HDF5 encoding via _write_dict.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dict</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># Hyperparameters</span>
+        <span class="s2">&quot;p&quot;</span><span class="p">:</span>          <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">,</span>
+        <span class="s2">&quot;max_bmu&quot;</span><span class="p">:</span>    <span class="bp">self</span><span class="o">.</span><span class="n">max_bmu</span><span class="p">,</span>
+        <span class="s2">&quot;index_type&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">index_type</span><span class="p">,</span>
+        <span class="s2">&quot;verbose&quot;</span><span class="p">:</span>    <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
+        <span class="s2">&quot;nlist&quot;</span><span class="p">:</span>      <span class="bp">self</span><span class="o">.</span><span class="n">nlist</span><span class="p">,</span>
+        <span class="s2">&quot;nprobe&quot;</span><span class="p">:</span>     <span class="bp">self</span><span class="o">.</span><span class="n">nprobe</span><span class="p">,</span>
+        <span class="c1"># Shape metadata</span>
+        <span class="s2">&quot;_M&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_M</span><span class="p">,</span>
+        <span class="s2">&quot;_N&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_N</span><span class="p">,</span>
+        <span class="s2">&quot;_d&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_d</span><span class="p">,</span>
+        <span class="c1"># Dense arrays (None if not yet recalled)</span>
+        <span class="s2">&quot;BMU&quot;</span><span class="p">:</span>            <span class="bp">self</span><span class="o">.</span><span class="n">BMU</span><span class="p">,</span>
+        <span class="s2">&quot;QE&quot;</span><span class="p">:</span>             <span class="bp">self</span><span class="o">.</span><span class="n">QE</span><span class="p">,</span>
+        <span class="s2">&quot;AFF&quot;</span><span class="p">:</span>            <span class="bp">self</span><span class="o">.</span><span class="n">AFF</span><span class="p">,</span>
+        <span class="s2">&quot;RFSize&quot;</span><span class="p">:</span>         <span class="bp">self</span><span class="o">.</span><span class="n">RFSize</span><span class="p">,</span>
+        <span class="s2">&quot;WL_Dist&quot;</span><span class="p">:</span>        <span class="bp">self</span><span class="o">.</span><span class="n">WL_Dist</span><span class="p">,</span>
+        <span class="s2">&quot;WL_Purity&quot;</span><span class="p">:</span>      <span class="bp">self</span><span class="o">.</span><span class="n">WL_Purity</span><span class="p">,</span>
+        <span class="s2">&quot;CADJ_nhbs_size&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">CADJ_nhbs_size</span><span class="p">,</span>
+        <span class="s2">&quot;CONN_nhbs_size&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">CONN_nhbs_size</span><span class="p">,</span>
+        <span class="c1"># Object array with None entries (WL)</span>
+        <span class="s2">&quot;WL&quot;</span><span class="p">:</span>     <span class="bp">self</span><span class="o">.</span><span class="n">WL</span><span class="p">,</span>
+        <span class="s2">&quot;WL_unq&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">WL_unq</span><span class="p">,</span>
+        <span class="c1"># Sparse matrices</span>
+        <span class="s2">&quot;CADJ&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">CADJ</span><span class="p">,</span>
+        <span class="s2">&quot;CONN&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">CONN</span><span class="p">,</span>
+        <span class="c1"># Ragged lists</span>
+        <span class="s2">&quot;RF&quot;</span><span class="p">:</span>        <span class="bp">self</span><span class="o">.</span><span class="n">RF</span><span class="p">,</span>
+        <span class="s2">&quot;CADJ_nhbs&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">CADJ_nhbs</span><span class="p">,</span>
+        <span class="s2">&quot;CONN_nhbs&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">CONN_nhbs</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">d</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="vqlp.VQRecaller.from_dict" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">from_dict</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">from_dict</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Reconstruct a VQRecaller from a dict produced by :meth:<code>to_dict</code>.</p>
+<p>Bypasses <code>__init__</code> so that all saved attributes are restored
+directly without re-running any computation.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>d</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>As returned by :meth:<code>to_dict</code>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="vqlp.VQRecaller (vqlp.vq.VQRecaller)" href="#vqlp.VQRecaller">VQRecaller</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src/vqlp/vq.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">732</span>
+<span class="normal">733</span>
+<span class="normal">734</span>
+<span class="normal">735</span>
+<span class="normal">736</span>
+<span class="normal">737</span>
+<span class="normal">738</span>
+<span class="normal">739</span>
+<span class="normal">740</span>
+<span class="normal">741</span>
+<span class="normal">742</span>
+<span class="normal">743</span>
+<span class="normal">744</span>
+<span class="normal">745</span>
+<span class="normal">746</span>
+<span class="normal">747</span>
+<span class="normal">748</span>
+<span class="normal">749</span>
+<span class="normal">750</span>
+<span class="normal">751</span>
+<span class="normal">752</span>
+<span class="normal">753</span>
+<span class="normal">754</span>
+<span class="normal">755</span>
+<span class="normal">756</span>
+<span class="normal">757</span>
+<span class="normal">758</span>
+<span class="normal">759</span>
+<span class="normal">760</span>
+<span class="normal">761</span>
+<span class="normal">762</span>
+<span class="normal">763</span>
+<span class="normal">764</span>
+<span class="normal">765</span>
+<span class="normal">766</span>
+<span class="normal">767</span>
+<span class="normal">768</span>
+<span class="normal">769</span>
+<span class="normal">770</span>
+<span class="normal">771</span>
+<span class="normal">772</span>
+<span class="normal">773</span>
+<span class="normal">774</span>
+<span class="normal">775</span>
+<span class="normal">776</span>
+<span class="normal">777</span>
+<span class="normal">778</span>
+<span class="normal">779</span>
+<span class="normal">780</span>
+<span class="normal">781</span>
+<span class="normal">782</span>
+<span class="normal">783</span>
+<span class="normal">784</span>
+<span class="normal">785</span>
+<span class="normal">786</span>
+<span class="normal">787</span>
+<span class="normal">788</span>
+<span class="normal">789</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reconstruct a VQRecaller from a dict produced by :meth:`to_dict`.</span>
+
+<span class="sd">    Bypasses ``__init__`` so that all saved attributes are restored</span>
+<span class="sd">    directly without re-running any computation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    d : dict</span>
+<span class="sd">        As returned by :meth:`to_dict`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    VQRecaller</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+
+    <span class="c1"># Hyperparameters</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">p</span>          <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">])</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">max_bmu</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;max_bmu&quot;</span><span class="p">])</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">index_type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;index_type&quot;</span><span class="p">])</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">verbose</span>    <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;verbose&quot;</span><span class="p">])</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">nlist</span>      <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;nlist&quot;</span><span class="p">)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">nprobe</span>     <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;nprobe&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Shape metadata (-1 sentinel → None for missing values)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_int_or_none</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">v</span>
+
+    <span class="n">obj</span><span class="o">.</span><span class="n">_M</span> <span class="o">=</span> <span class="n">_int_or_none</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;_M&quot;</span><span class="p">))</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">_N</span> <span class="o">=</span> <span class="n">_int_or_none</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;_N&quot;</span><span class="p">))</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">_d</span> <span class="o">=</span> <span class="n">_int_or_none</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;_d&quot;</span><span class="p">))</span>
+
+    <span class="c1"># Dense arrays</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;BMU&quot;</span><span class="p">,</span> <span class="s2">&quot;QE&quot;</span><span class="p">,</span> <span class="s2">&quot;AFF&quot;</span><span class="p">,</span> <span class="s2">&quot;RFSize&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;WL_Dist&quot;</span><span class="p">,</span> <span class="s2">&quot;WL_Purity&quot;</span><span class="p">,</span> <span class="s2">&quot;CADJ_nhbs_size&quot;</span><span class="p">,</span> <span class="s2">&quot;CONN_nhbs_size&quot;</span><span class="p">):</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+    <span class="c1"># WL (object array with possible None entries)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">WL</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;WL&quot;</span><span class="p">)</span>
+
+    <span class="c1"># WL_unq: type is preserved by _write_label_array / _read_label_array</span>
+    <span class="c1"># so no casting is needed here</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">WL_unq</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;WL_unq&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Sparse matrices</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">CADJ</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CADJ&quot;</span><span class="p">)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">CONN</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CONN&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Ragged lists</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">RF</span>        <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;RF&quot;</span><span class="p">)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">CADJ_nhbs</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CADJ_nhbs&quot;</span><span class="p">)</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">CONN_nhbs</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CONN_nhbs&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">obj</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>

@@ -393,10 +393,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-inspect-the-recall-products" class="md-nav__link">
+  <a href="#5-save-and-load" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Inspect the recall products
+        5. Save and load
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-inspect-the-recall-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Inspect the recall products
       
     </span>
   </a>
@@ -509,10 +520,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-inspect-the-recall-products" class="md-nav__link">
+  <a href="#5-save-and-load" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Inspect the recall products
+        5. Save and load
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-inspect-the-recall-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Inspect the recall products
       
     </span>
   </a>
@@ -1272,6 +1294,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <li>Fit prototypes via FAISS k-means (<code>VQFitter</code>)</li>
 <li>Run full recall analysis on the learned prototypes (<code>VQRecaller</code>), <strong>passing labels to compute WL / WL_Dist / WL_Purity</strong></li>
 <li>Plot the data and connectivity graph, <strong>coloring prototypes by their winning label (WL)</strong></li>
+<li>Save the fitted model to disk and reload it</li>
 <li>Inspect all recall products including label summaries</li>
 </ol>
 </div>
@@ -1710,23 +1733,32 @@ plt.show()
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=81be20d2">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a1b2c3d4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="5-inspect-the-recall-products">5. Inspect the recall products<a class="anchor-link" href="#5-inspect-the-recall-products">¶</a></h2><p><code>get_summary()</code> returns aggregate statistics; when label recall has been run it
-also reports <code>n_unique_labels</code>, <code>labeled_prototypes</code>, <code>mean_label_purity</code>, and
-<code>min_label_purity</code>.</p>
-<p>Below that we inspect the per-observation BMU / QE / <strong>AFF</strong> arrays, the
-receptive fields, the connectivity matrix, the <strong>label recall products</strong>, and
-finally hard vs. soft reconstruction error.</p>
+<h2 id="5-save-and-load">5. Save and load<a class="anchor-link" href="#5-save-and-load">¶</a></h2><p>Once a <code>VQFitter</code> has been fitted and recalled, it is straightforward to
+persist the entire object — including the embedded <code>VQRecaller</code> and all its
+computed products — to an HDF5 file for later use.</p>
+<div class="highlight"><pre><span></span><span class="n">fitter</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"fitter.h5"</span><span class="p">)</span>
+<span class="n">fitter</span> <span class="o">=</span> <span class="n">VQFitter</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"fitter.h5"</span><span class="p">)</span>
+</pre></div>
+<p>The file stores hyperparameters, the prototype matrix <code>W</code>, and the full
+recaller state (BMU assignments, receptive fields, connectivity matrices,
+label recall products, etc.) in a structured HDF5 layout. Any attribute
+that was <code>None</code> at save time (e.g. <code>WL</code> if <code>recall_labels()</code> was not
+called) is restored as <code>None</code> on load.</p>
+<p>In the cell below we save the fitted fitter, reload it into a fresh
+variable, and confirm that the prototype matrix and a selection of recall
+products are recovered exactly. The rest of this example then continues
+with the reloaded object, implicitly validating the round-trip.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a241612e">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e5f6a7b8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1744,12 +1776,109 @@ finally hard vs. soft reconstruction error.</p>
 </div>
 </clipboard-copy>
 </div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">SAVE_PATH</span> <span class="o">=</span> <span class="s2">"vqlp_example.h5"</span>
+
+<span class="c1"># Save the complete fitted fitter (prototype matrix + all recall products)</span>
+<span class="n">fitter</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Saved to </span><span class="si">{</span><span class="n">SAVE_PATH</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Reload into a fresh variable in a new session this would be the entry point</span>
+<span class="n">fitter</span>   <span class="o">=</span> <span class="n">VQFitter</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">)</span>
+<span class="n">recaller</span> <span class="o">=</span> <span class="n">fitter</span><span class="o">.</span><span class="n">recaller</span>
+<span class="n">W</span>        <span class="o">=</span> <span class="n">fitter</span><span class="o">.</span><span class="n">W</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Reloaded from </span><span class="si">{</span><span class="n">SAVE_PATH</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Spot-check: confirm key products survived the round-trip</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="k">assert</span> <span class="n">fitter</span><span class="o">.</span><span class="n">W</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="n">M_PROTOTYPES</span><span class="p">,</span> <span class="n">N_FEATURES</span><span class="p">),</span>  <span class="s2">"W shape mismatch"</span>
+<span class="k">assert</span> <span class="n">recaller</span><span class="o">.</span><span class="n">BMU</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">N_SAMPLES</span><span class="p">,</span>            <span class="s2">"BMU row count mismatch"</span>
+<span class="k">assert</span> <span class="n">recaller</span><span class="o">.</span><span class="n">CONN</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span>                     <span class="s2">"CONN missing after load"</span>
+<span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">recaller</span><span class="o">.</span><span class="n">WL_unq</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">N_BLOBS</span><span class="p">)),</span> <span class="s2">"WL_unq mismatch"</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Round-trip checks passed  ✓"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"File size: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">SAVE_PATH</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1024</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> KB"</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6">SAVE_PATH = "vqlp_example.h5"
+
+# Save the complete fitted fitter (prototype matrix + all recall products)
+fitter.save(SAVE_PATH)
+print(f"Saved to {SAVE_PATH}")
+
+# Reload into a fresh variable in a new session this would be the entry point
+fitter   = VQFitter.load(SAVE_PATH)
+recaller = fitter.recaller
+W        = fitter.W
+print(f"Reloaded from {SAVE_PATH}")
+
+# Spot-check: confirm key products survived the round-trip
+import os
+assert fitter.W.shape == (M_PROTOTYPES, N_FEATURES),  "W shape mismatch"
+assert recaller.BMU.shape[0] == N_SAMPLES,            "BMU row count mismatch"
+assert recaller.CONN is not None,                     "CONN missing after load"
+assert list(recaller.WL_unq) == list(range(N_BLOBS)), "WL_unq mismatch"
+print(f"Round-trip checks passed  ✓")
+print(f"File size: {os.path.getsize(SAVE_PATH) / 1024:.1f} KB")</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Saved to vqlp_example.h5
+Reloaded from vqlp_example.h5
+Round-trip checks passed  ✓
+File size: 56.7 KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=81be20d2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="6-inspect-the-recall-products">6. Inspect the recall products<a class="anchor-link" href="#6-inspect-the-recall-products">¶</a></h2><p><code>get_summary()</code> returns aggregate statistics; when label recall has been run it
+also reports <code>n_unique_labels</code>, <code>labeled_prototypes</code>, <code>mean_label_purity</code>, and
+<code>min_label_purity</code>.</p>
+<p>Below that we inspect the per-observation BMU / QE / <strong>AFF</strong> arrays, the
+receptive fields, the connectivity matrix, the <strong>label recall products</strong>, and
+finally hard vs. soft reconstruction error.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a241612e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"--- get_summary() ---"</span><span class="p">)</span>
 <span class="n">summary</span> <span class="o">=</span> <span class="n">fitter</span><span class="o">.</span><span class="n">get_summary</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">summary</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">k</span><span class="si">:</span><span class="s2">35s</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">print("--- get_summary() ---")
+<div class="clipboard-copy-txt" id="cell-7">print("--- get_summary() ---")
 summary = fitter.get_summary()
 for k, v in summary.items():
     print(f"  {k:35s}: {v}")</div>
@@ -1768,7 +1897,7 @@ for k, v in summary.items():
   fitted                             : True
   M                                  : 20
   d                                  : 2
-  p_norm                             : 2
+  p_norm                             : 2.0
   max_bmu                            : 2
   random_state                       : 42
   N                                  : 500
@@ -1795,10 +1924,10 @@ for k, v in summary.items():
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1818,7 +1947,7 @@ for k, v in summary.items():
           <span class="sa">f</span><span class="s2">" | 2nd BMU: </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">BMU</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2"> QE2: </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">QE</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span>
           <span class="sa">f</span><span class="s2">" AFF2: </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">AFF</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">print("--- BMU, QE &amp; AFF (first 8 observations) ---")
+<div class="clipboard-copy-txt" id="cell-8">print("--- BMU, QE &amp; AFF (first 8 observations) ---")
 print(f"  BMU shape : {recaller.BMU.shape} (N x max_bmu)")
 print(f"  QE shape  : {recaller.QE.shape} (N x max_bmu)")
 print(f"  AFF shape : {recaller.AFF.shape} (N x max_bmu)")
@@ -1862,10 +1991,10 @@ for i in range(8):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1881,7 +2010,7 @@ for i in range(8):
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">M_PROTOTYPES</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  RF[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">]: </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">RFSize</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2"> obs  -&gt;  indices </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">RF</span><span class="p">[</span><span class="n">i</span><span class="p">][:</span><span class="mi">6</span><span class="p">]</span><span class="si">}{</span><span class="s1">'...'</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">recaller</span><span class="o">.</span><span class="n">RFSize</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">''</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">print("--- Receptive fields (RF) ---")
+<div class="clipboard-copy-txt" id="cell-9">print("--- Receptive fields (RF) ---")
 print(f"  RFSize range: {recaller.RFSize.min()} - {recaller.RFSize.max()} observations")
 print(f"  Empty prototypes: {int(np.sum(recaller.RFSize == 0))}")
 for i in range(min(5, M_PROTOTYPES)):
@@ -1900,11 +2029,11 @@ for i in range(min(5, M_PROTOTYPES)):
 <pre>--- Receptive fields (RF) ---
   RFSize range: 2 - 53 observations
   Empty prototypes: 0
-  RF[0]:  10 obs  -&gt;  indices [ 41 115 150 168 190 196]...
-  RF[1]:  43 obs  -&gt;  indices [ 6 25 43 49 50 57]...
-  RF[2]:  30 obs  -&gt;  indices [10 16 53 70 71 96]...
-  RF[3]:  27 obs  -&gt;  indices [ 18  19  97 114 128 134]...
-  RF[4]:  25 obs  -&gt;  indices [ 26  31  42 176 177 181]...
+  RF[0]:  10 obs  -&gt;  indices [41, 115, 150, 168, 190, 196]...
+  RF[1]:  43 obs  -&gt;  indices [6, 25, 43, 49, 50, 57]...
+  RF[2]:  30 obs  -&gt;  indices [10, 16, 53, 70, 71, 96]...
+  RF[3]:  27 obs  -&gt;  indices [18, 19, 97, 114, 128, 134]...
+  RF[4]:  25 obs  -&gt;  indices [26, 31, 42, 176, 177, 181]...
 </pre>
 </div>
 </div>
@@ -1917,10 +2046,10 @@ for i in range(min(5, M_PROTOTYPES)):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1938,7 +2067,7 @@ for i in range(min(5, M_PROTOTYPES)):
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">M_PROTOTYPES</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Prototype </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">CONN_nhbs_size</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> neighbors  -&gt;  </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">CONN_nhbs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">print("--- Connectivity matrix (CONN) ---")
+<div class="clipboard-copy-txt" id="cell-10">print("--- Connectivity matrix (CONN) ---")
 print(f"  CONN shape  : {recaller.CONN.shape}   (M x M, sparse)")
 print(f"  Nonzero entries: {recaller.CONN.nnz}  ({summary['connectivity_edges']} unique edges)")
 print(f"  Degree range: {recaller.CONN_nhbs_size.min()} - {recaller.CONN_nhbs_size.max()} neighbors")
@@ -1978,10 +2107,10 @@ for i in range(min(5, M_PROTOTYPES)):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2005,7 +2134,7 @@ for i in range(min(5, M_PROTOTYPES)):
     <span class="n">dist_str</span> <span class="o">=</span> <span class="s2">"  "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">WL_Dist</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">recaller</span><span class="o">.</span><span class="n">WL_unq</span><span class="p">)))</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">6d</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">wl_str</span><span class="si">:</span><span class="s2">&gt;5</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">WL_Purity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">7.4f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">recaller</span><span class="o">.</span><span class="n">RFSize</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">7d</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">dist_str</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10">print("--- Label recall (WL / WL_Dist / WL_Purity) ---")
+<div class="clipboard-copy-txt" id="cell-11">print("--- Label recall (WL / WL_Dist / WL_Purity) ---")
 print(f"  Unique labels seen : {recaller.WL_unq}")
 print(f"  WL shape           : {recaller.WL.shape}  (winning label per prototype)")
 print(f"  WL_Dist shape      : {recaller.WL_Dist.shape}  (M x n_unique_labels, row-normalized)")
@@ -2070,10 +2199,10 @@ for i in range(M_PROTOTYPES):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2091,7 +2220,7 @@ for i in range(M_PROTOTYPES):
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Hard reconstruction mean L2 error: </span><span class="si">{</span><span class="n">hard_err</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Soft reconstruction mean L2 error: </span><span class="si">{</span><span class="n">soft_err</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11">print("--- Reconstruction ---")
+<div class="clipboard-copy-txt" id="cell-12">print("--- Reconstruction ---")
 X_hard = recaller.reconstruct(W, X, method="hard")
 X_soft = recaller.reconstruct(W, X, method="soft")
 hard_err = np.mean(np.linalg.norm(X - X_hard, axis=1))
