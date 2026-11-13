@@ -1,7 +1,7 @@
 site_name: vqlp
 site_description: Tools for fitting vector quantizers under arbitrary Lp metrics and computing recall quantities.
-repo_url: https://github.com/jt-ut/vqlp
-repo_name: jt-ut/vqlp
+repo_url: https://github.com/jjtphd/vqlp
+repo_name: jjtphd/vqlp
 
 theme:
   name: material

@@ -54,10 +54,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jt-ut/vqlp"
-Repository = "https://github.com/jt-ut/vqlp"
-Documentation = "https://github.com/jt-ut/vqlp#readme"
-"Bug Tracker" = "https://github.com/jt-ut/vqlp/issues"
+Homepage = "https://github.com/jjtphd/vqlp"
+Repository = "https://github.com/jjtphd/vqlp"
+Documentation = "https://github.com/jjtphd/vqlp#readme"
+"Bug Tracker" = "https://github.com/jjtphd/vqlp/issues"
 
 # Tell setuptools where to find the package
 [tool.setuptools.packages.find]
