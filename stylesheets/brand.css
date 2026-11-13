@@ -1,0 +1,25 @@
+/* Shared brand for jjtphd.github.io and its package documentation.
+   Palette: gunmetal #293241, blue #3D5A80, cerulean #98C1D9, light cyan #E0FBFC, sienna #EE6C4D, snow #F7FCFC */
+:root {
+  --md-primary-fg-color:        #293241;
+  --md-primary-fg-color--light: #3D5A80;
+  --md-primary-fg-color--dark:  #1C2330;
+  --md-primary-bg-color:        #E0FBFC;
+  --md-accent-fg-color:         #EE6C4D;
+  --md-accent-fg-color--transparent: rgba(238,108,77,0.1);
+}
+[data-md-color-scheme="default"] {
+  --md-default-bg-color:   #F7FCFC;
+  --md-default-fg-color:   #293241;
+  --md-typeset-a-color:    #3D5A80;
+  --md-code-bg-color:      #EAF4F6;
+}
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color:    #98C1D9;
+  --md-accent-fg-color:    #EE6C4D;
+}
+.md-header, .md-tabs { background-color: #293241; }
+.md-header__title { font-weight: 700; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { color: #293241; font-weight: 700; }
+[data-md-color-scheme="slate"] .md-typeset h1, [data-md-color-scheme="slate"] .md-typeset h2, [data-md-color-scheme="slate"] .md-typeset h3 { color: #E0FBFC; }
+.md-typeset a:hover { color: #EE6C4D; }
