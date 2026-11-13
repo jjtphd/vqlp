@@ -9,10 +9,10 @@ description = "Vector Quantizer with arbitrary Lp distance metrics"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Josh Taylor", email = "joshtaylor@utexas.edu"}
+    {name = "Joshua J. Taylor", email = "joshtaylor@utexas.edu"}
 ]
 maintainers = [
-    {name = "Josh Taylor", email = "joshtaylor@utexas.edu"}
+    {name = "Joshua J. Taylor", email = "joshtaylor@utexas.edu"}
 ]
 keywords = ["vector-quantization", "machine-learning", "clustering", "lp-norms"]
 classifiers = [
